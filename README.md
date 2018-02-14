@@ -21,6 +21,7 @@ Pero, ¿Qué nos dice la historia?
 <p align="center">
 <img src="Images/corredores_tiempo.gif" alt="gif">
 </p><br/>
+
 ## Altura promedio por decadas.
 * 1920 - 1930 es: `178.25453749999988`
 * 1930 - 1940 es: `181.2450224215246`
@@ -33,6 +34,7 @@ Pero, ¿Qué nos dice la historia?
 * 2000 - 2010 es: `181.72643386243396`
 * 2010 - 2016 es: `180.91711004784682`
 * 2017 es: `180.15961904761895`
+
 Esta imagen muestra como ha cambiado la altura y el peso a través de las decadas desde 1920 hasta la temporada del 2017. 
 Durante los cicuentas y hasta finales de los setentas la distribución de la altura se encontrará a la derecha y en las decadas 
 posteriores retrocederá a una media de 181cm. 
