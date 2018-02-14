@@ -174,7 +174,7 @@ def graficar_tiempo(lista, df):
     titulos.append(2017)
     n = 0
     for i in lista:
-        fig = plt.figure()
+        fig = plt.figure(figsize = (13, 7))
         ax = fig.add_subplot(111)
         plt.xlim(df['Altura'].min() - 1, df['Altura'].max() + 1) 
         #Ya que solo hay 10 jugadores con tan alto peso.
@@ -186,7 +186,7 @@ def graficar_tiempo(lista, df):
         ax.text(x = 164.5 , y = 127,
                 s = '   ©Mauricio Mani' + espacio * 170 + 'Source: NFL: www.nfl.com/players   ',
                 fontsize = 10, color = '#f0f0f0', backgroundcolor = 'grey')
-        ax.text(x = 164, y = 285, 
+        ax.text(x = 162.5, y = 285, 
                s = 'Cambio en el peso y la altura de los corredores de la NFL a través del tiempo',
               fontsize = 20, weight = 'bold', alpha = .75)
         ax.text(x = 178, y = 278, s = 'Decada: ' + str(titulo), fontsize = 18, alpha = 0.85)
@@ -211,12 +211,12 @@ def entender_2017():
     pdf = stats.norm.pdf(lnspc, mu, sigma)
     ax.plot(lnspc, pdf, color = 'dodgerblue')
     fig.subplots_adjust(bottom = 0.10)
-    ax.text(x = 163, y = -0.008,
+    ax.text(x = 165, y = -0.008,
             s = '   ©Mauricio Mani' + espacio*150 + 'Source: NFL: www.nfl.com/players   ',
             fontsize = 12, color = '#f0f0f0', backgroundcolor = 'grey')
-    ax.text(x = 167, y = 0.087, s = "Estatura de runningbacks activos del 2017 - NFL ",
+    ax.text(x = 168, y = 0.087, s = "Estatura de runningbacks activos del 2017 - NFL ",
                fontsize = 23, weight = 'bold', alpha = .75)
-    ax.text(x = 165, y = 0.083, 
+    ax.text(x = 167, y = 0.083, 
                s = 'Histograma de la estatura de corredores activos comparados con una distribución normal',
               fontsize = 16, alpha = .85)
     fig = plt.figure()
@@ -287,15 +287,18 @@ def entender_2017():
 #La lista contiene los dataframes de altura y peso por decada. 
 def obtener_lista(df, df_2017):
     lista = []
+    lista1 = []
     for año in range(1930, 2011, 10):
         lista.append(df[['Altura', 'Peso']].loc[(df['Año'] < año) & (df['Año'] >= año -10)])
+        lista1.append(df['Altura'].loc[(df['Año'] < año) & (df['Año'] >= año -10)])
+    lista1.append(df['Altura'].loc[(df['Año'] < 2017) & (df['Año'] >= 2010)])
+    lista1.append(df_2017['Altura'])
     lista.append(df[['Altura', 'Peso']].loc[(df['Año'] < 2017) & (df['Año'] >= 2010)])
     lista.append(df_2017[['Altura', 'Peso']])
-    return(lista)
+    return(lista, lista1)
 
 #Genera un boxplot que compara las estaturas a través de las decadas.        
 def graficar_estatura(lista):
-    lista = lista['Altura']
     style.use('fivethirtyeight')
     plt.figure()
     ax = plt.subplot(111)
@@ -337,7 +340,6 @@ def z_test(dset1, dset2, alpha = 0.05):
  
 #Imprime la informacion de la prueba z y grafica los resutados.
 def prueba_hipotesis(lista):
-    lista = lista['Altura']
     espacio = ' '
     style.use('ggplot')
     lista = lista[:-1]
@@ -378,7 +380,7 @@ def prueba_hipotesis(lista):
     ax[2].axvline(x=pv1_och_set, color = 'red', linestyle='--', linewidth = 4)
     ax[2].axvline(x=pv2_och_set, color = 'red', linestyle='--', linewidth = 4)
     ax[2].text(x = 171, y=86, s='Decada de\nlos Ochentas')
-    ax[2].text(x = 166, y = -30,
+    ax[2].text(x = 166, y = -45,
       s = '   ©Mauricio Mani' + espacio*150 + 'Source: NFL: www.nfl.com/players   ',
             fontsize = 12, color = '#f0f0f0', backgroundcolor = 'grey')
     ax[2].set_ylabel('Cuenta')
@@ -394,9 +396,9 @@ def prueba_hipotesis(lista):
     ax[0].axvline(x=pv2_ses_set, color = 'red', linestyle='--', linewidth = 4)
     ax[0].set_ylabel('Cuenta')
     ax[0].text(x = 171, y=87, s='Decada de\nlos Sesentas')
-    ax[0].text(x = 169, y = 158, s = "Diseñando al runningback perfecto - proceso de aprendizaje",
+    ax[0].text(x = 168, y = 158, s = "Diseñando al runningback perfecto - proceso de aprendizaje",
                fontsize = 23, weight = 'bold', alpha = .75)
-    ax[0].text(x = 169, y = 120, 
+    ax[0].text(x = 168, y = 120, 
                s = 'Intervalos de confianza de la diferencia de medias en la estatura de los corredores de la NFL\nEn la decada de los sesentas, setentas y ochentas.',
               fontsize = 16, alpha = .85)
     plt.show()  
@@ -418,6 +420,7 @@ def graficar_dispersion_2017(df_2017):
             fontsize = 18, weight = 'bold', alpha = .75)
     ax.text(x = 166.5, y = 260.5, s = 'Gráfico de dispersión de la altura y peso de los corredores cada punto muestra las yardas\nParece no haber una clara relación entre yardas y altura o peso',
             fontsize = 16, alpha = 0.85)
+    plt.show()
 
 if __name__ =='__main__':
     df = pd.DataFrame(columns = ['Nombre', 'Año', 'Peso', 'Altura', 'Yardas_totales'])
@@ -461,16 +464,16 @@ if __name__ =='__main__':
     print('Media total:')
     print(df_2017['Altura'].mean())
     print('Estatura media de los jugadores activos de la temporada 2017: ')
-    df_2017['Altura'].loc[df_2017['Status']=='ACT'].mean()
+    print(df_2017['Altura'].loc[df_2017['Status']=='ACT'].mean())
     #Estatura media de los jugadores activos con mas de 1,000 yardas en la temporada 2017
     print('Estatura media de los jugadores activos de la temporada 2017 con mas de 1000 yardas: ')
-    df_2017['Altura'].loc[(df_2017['Status']=='ACT') & (df_2017['Yardas'] > 1000)].mean()
+    print(df_2017['Altura'].loc[(df_2017['Status']=='ACT') & (df_2017['Yardas'] > 1000)].mean())
     #Realizar funciones. 
-    lista = obtener_lista(df, df_2017)
+    lista, lista1 = obtener_lista(df, df_2017)
     graficar_tiempo(lista, df)
-    graficar_estatura(lista)
+    graficar_estatura(lista1)
     mejores_2017 = entender_2017()
-    prueba_hipotesis(lista)
+    prueba_hipotesis(lista1)
     graficar_dispersion_2017(df_2017)
 #df = pd.read_csv('data/history_RB.csv', index_col=[0], encoding = "ISO-8859-1")
 #df_2017 = pd.read_csv('data/2017_RB.csv')
