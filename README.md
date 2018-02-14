@@ -21,8 +21,22 @@ Pero, ¿Qué nos dice la historia?
 <p align="center">
 <img src="Images/corredores_tiempo.gif" alt="gif">
 </p><br/>
+## Altura promedio por decadas.
+* 1920 - 1930 es: `178.25453749999988`
+* 1930 - 1940 es: `181.2450224215246`
+* 1940 - 1950 es: `181.38997468354438`
+* 1950 - 1960 es: `182.5032027027025`
+* 1960 - 1970 es: `184.5428217821781`
+* 1970 - 1980 es: `183.91626603325398`
+* 1980 - 1990 es: `181.4760692307693`
+* 1990 - 2000 es: `181.45665420560732`
+* 2000 - 2010 es: `181.72643386243396`
+* 2010 - 2016 es: `180.91711004784682`
+* 2017 es: `180.15961904761895`
 Esta imagen muestra como ha cambiado la altura y el peso a través de las decadas desde 1920 hasta la temporada del 2017. 
-En el eje horizontal o de las abcisas se muestra la altura y el eje vertical o real se muestra el peso. Por lo que un aumento
+Durante los cicuentas y hasta finales de los setentas la distribución de la altura se encontrará a la derecha y en las decadas 
+posteriores retrocederá a una media de 181cm. 
+En el eje horizontal o de las abscisas se muestra la altura y el eje vertical o real se muestra el peso. Por lo que un aumento
 en la altura desplazaría las observaciones a la derecha y un aumento en el peso hacia arriba. Parece que los corredores son mas 
 fuertes hoy en dia y menos altos que en decadas anteriores a los ochentas.
 Para entender mejor el aprendizaje sobre los corredores graficaremos boxplots (diagrama de caja y bigotes) que son dificiles de entender
@@ -32,37 +46,52 @@ por lo que explicaré un boxplot con un ejemplo de la temporada 2017.
 El boxplot es de las herramientas mas completas para hacer un análisis preliminar sobre los datos obtenidos. Ya que a diferencia del 
 histograma permite de forma mas sencilla comparar dos distribuciones. Comunmente queremos saber que tan normal parecen los datos, 
 ¡usa un boxplot!
-La normalidad es fácil de ver graficamente con un histograma. Primero graficaremos la estatura de los corredores activos de 
-la temporada 2017 y la compararemos con una distribución normal.  
+La normalidad es más fácil de ver graficamente con un histograma (pero no te preocupes, también con un boxplot). 
+Primero graficaremos la estatura de los corredores activos de  la temporada 2017 y la compararemos con una distribución normal.  
 <br/>
 <p align="center">
 <img src="Images/histograma_normal.png" alt="histograma">
 </p><br/>
-¿Parece normal, cierto? Bueno, no nos podemos comparar con la simple vista. Podemos usar un Q-Q plot. Que compara los valores 
-vistos con valores hipoteticos normales, una distribución normal será una linea de 45 grados. En este caso no parece normal.
+La altura minima es 167.5cm. Son dos jugadores con esa altura:
+* `Tarik Cohen`: 377 yardas
+* `Jacquizz Rodgers`: 244 yardas
+La altura maxima es de 192cm. Son tres jugadores con esa estatura:
+* `Derrick Henry`: 744 yardas
+* `Latavius Murray`: 842 yardas
+* `Rod Smith`: 232 yardas
+La media es de 180.16cm, pero en el histograma claramente podemos ver que la moda se encuentra en otro intervalo.
+Por lo que es mas comun ver corredores mas pequeños que la media. 
+Sin embrago, ¿parece normal, cierto? Bueno, no los podemos comparar con la simple vista. Podemos usar un Q-Q plot. Que compara los valores 
+vistos con valores de probabilidad hipoteticos normales, una distribución normal será una linea de 45 grados. En este caso no parece normal.
 <br/>
 <p align="center">
 <img src="Images/Q-Q_plot.png" alt="Q-Q plot">
 </p><br/>
-Una de las suposiciones de normalidad es una media igual, una mediana igual y una moda igual. La media es ´179.23179487179485´
-La mediana es ´178.75´ y no hay moda (o todos los valores son la moda). 
+Como podemos ver los puntos parecen encontrarse en ciertas regiones, esto se debe a que no hay continuidad en la altura.
+Por lo que el Q-Q plot no es un buen indicador. 
+Una de las suposiciones de normalidad es una media igual, una mediana igual y una moda igual. La media es ´180.2104´
+La mediana es ´180.15961904761895´ y no hay moda (o todos los valores son la moda). 
 ¡Hagamos estadisticas mas avanzadas!
 Para probar la normalidad de una distribución podemos usar la prueba X^2 de normalidad, la prueba Kolmogorov-Smirnov, 
-la prueba Shapiro-Wilk y la prueba Lilliefors estas ultimas son la mas famosa para normalidad. 
+la prueba Shapiro-Wilk y la prueba Lilliefors estas ultimas son la mas famosa para normalidad. Todas son una especie de 
+pruebas de hipotesis, donde tenemos una hipotesis nula y una alternativa. 
 
 * El valor de la prueba Kolmogorov-Smirnov es: `0.123436625014`
 * El valor p de la prueba es: `5.73947997152e-10`
 * El valor de la prueba Shapiro-Wilk es: `0.9677223563194275`
 * El valor p de la prueba es: `1.819115823309403e-05`
 
+La prueba Shapiro Wilk plantea la hipotesis nula que las observaciones provienen de una distribución normal.
 Ahora veamos una distribución acumulada de la estatura de los corredores y su normal:
 <br/>
 <p align="center">
 <img src="Images/Histograma_acumulado.png" alt="Kolmogorov">
 </p><br/>
-Los datos y la imagen niegan la normalidad de nuestra distribución. Y se puede ver muy "claro" en el boxplot gracias a
-la dispersión de las cajas. Nos muestra valores extremos tambien. Para este caso son los jugadores con mas de 800 yardas en la 
-temporada 2017.
+Los datos y la imagen niegan la normalidad de nuestra distribución. Tanto la prueba Lilliefors como la prueba Kolmogorov-Smirnov
+se basan en la distancia mas extrema de la distribución acumulada vista y la distribucion acumulada hipotestica normal.
+Además las 2 pruebas que realizamos tienen valores p extremadamente pequeños. 
+Y se puede ver muy "claro" en el boxplot (la normalidad) gracias a la dispersión de las cajas. Nos muestra valores extremos tambien.
+Para este caso son los jugadores con mas de 800 yardas en la temporada 2017.
 <br/>
 <p align="center">
 <img src="Images/entender_boxplot.png" alt="boxplot">
@@ -112,14 +141,16 @@ Además las distribuciones se han encogido, lo que nos muestra que la NFL ahora s
 Esta es información poblacional, por lo que sea lo que sea que veamos en este grafico es la realidad (a diferencia de 
 usar una muestra). Sin embargo, realizaremos una prueba de hipotesis de la diferencia de dos muestras independientes.
 (Para mayor información correr el codigo).
+
 <br/>
 <p align="center">
 <img src="Images/prueba_hipotesis.png" alt="hipotesis">
 </p><br/>
 Podemos ver claramente que es improbable que se haya dado por aleatoriedad la altura de los corredores. 
-Pero, ¿Que no son mejores los jugadores altos, que no los mas altos tienen mas yardas? Veamos que pasa en la temporada 2017.
-Usaremos un gráfico de dispersión pero las observaciones estarán en función de las yardas por temporada. 
-Claramente se ve que no hay una relacion entre las yardas por temporada y la altura o inclusive el peso. 
+Pero, ¿Que no son mejores los jugadores altos, ¿que no los mas altos tienen mas yardas? Veamos que pasa en la temporada 2017.
+Al igual que al principio usaremos un gráfico de dispersión pero en este caso las observaciones estarán en 
+función de las yardas por temporada. Claramente se ve que no hay una relacion entre las yardas por temporada y la altura o inclusive el peso. 
+
 <br/>
 <p align="center">
 <img src="Images/dispersion.png" alt="dispersion">

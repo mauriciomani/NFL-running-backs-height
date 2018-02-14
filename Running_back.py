@@ -181,6 +181,7 @@ def graficar_tiempo(lista, df):
         plt.ylim(df['Peso'].min() - 1, 275)
         ax.scatter(x= i['Altura'], y= i['Peso'])
         titulo = titulos[n]
+        print('La altura media de ' + str(titulo) + ' es: ' + str(i['Altura'].mean()))
         plt.xlabel('Altura')
         plt.ylabel('Peso')
         ax.text(x = 164.5 , y = 127,
@@ -190,11 +191,11 @@ def graficar_tiempo(lista, df):
                s = 'Cambio en el peso y la altura de los corredores de la NFL a través del tiempo',
               fontsize = 20, weight = 'bold', alpha = .75)
         ax.text(x = 178, y = 278, s = 'Decada: ' + str(titulo), fontsize = 18, alpha = 0.85)
-        plt.savefig('Images/'+ str(titulo) + '.png')
+        #plt.savefig('Images/'+ str(titulo) + '.png')
         n +=1
 
 #Genera boxplots e histogramas para entender el cambio de la estatura a través del tiempo.             
-def entender_2017():
+def entender_2017(df_2017):
     style.use('ggplot')
     altura = df_2017['Altura']
     print('Media de la estatura de los runningbacks de la temporada 2017: ')
@@ -265,7 +266,7 @@ def entender_2017():
     print(df_2017['Altura'].loc[(df_2017['Status']=='ACT') & (df_2017['Yardas'] > 800)].mode())
     #La mediana y la moda son muy similares.
     #El boxplot tamnien nos sirve para revisar la normalidad de un dataset.
-    plt.xticks([1], ['Mas de 8,000 yardas'])
+    plt.xticks([1], ['Mas de 800 yardas'])
     fig.subplots_adjust(bottom = 0.10)
     ax.text(x = 0.5, y = 169.5,
             s = '   ©Mauricio Mani' + espacio*120 + 'Source: NFL: www.nfl.com/players   ',
@@ -468,11 +469,13 @@ if __name__ =='__main__':
     #Estatura media de los jugadores activos con mas de 1,000 yardas en la temporada 2017
     print('Estatura media de los jugadores activos de la temporada 2017 con mas de 1000 yardas: ')
     print(df_2017['Altura'].loc[(df_2017['Status']=='ACT') & (df_2017['Yardas'] > 1000)].mean())
+    #Entender gráficas
+    print(df_2017.loc[df_2017['Altura']==167.5])
     #Realizar funciones. 
     lista, lista1 = obtener_lista(df, df_2017)
     graficar_tiempo(lista, df)
     graficar_estatura(lista1)
-    mejores_2017 = entender_2017()
+    mejores_2017 = entender_2017(df_2017)
     prueba_hipotesis(lista1)
     graficar_dispersion_2017(df_2017)
 #df = pd.read_csv('data/history_RB.csv', index_col=[0], encoding = "ISO-8859-1")
