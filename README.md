@@ -50,10 +50,10 @@ La mediana es ´178.75´ y no hay moda (o todos los valores son la moda).
 Para probar la normalidad de una distribución podemos usar la prueba X^2 de normalidad, la prueba Kolmogorov-Smirnov, 
 la prueba Shapiro-Wilk y la prueba Lilliefors estas ultimas son la mas famosa para normalidad. 
 
-* El valor de la prueba Kolmogorov-Smirnov es: ´0.123436625014´
-* El valor p de la prueba es: ´5.73947997152e-10´
-* El valor de la prueba Shapiro-Wilk es: ´0.9677223563194275´
-* El valor p de la prueba es: ´1.819115823309403e-05´
+* El valor de la prueba Kolmogorov-Smirnov es: `0.123436625014`
+* El valor p de la prueba es: `5.73947997152e-10`
+* El valor de la prueba Shapiro-Wilk es: `0.9677223563194275`
+* El valor p de la prueba es: `1.819115823309403e-05`
 
 Ahora veamos una distribución acumulada de la estatura de los corredores y su normal:
 <br/>
@@ -65,7 +65,7 @@ la dispersión de las cajas. Nos muestra valores extremos tambien. Para este caso
 temporada 2017.
 <br/>
 <p align="center">
-<img src="Images/Entender_boxplot.png" alt="boxplot">
+<img src="Images/entender_boxplot.png" alt="boxplot">
 </p><br/>
 
 ```
