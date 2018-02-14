@@ -49,10 +49,12 @@ La mediana es ´178.75´ y no hay moda (o todos los valores son la moda).
 ¡Hagamos estadisticas mas avanzadas!
 Para probar la normalidad de una distribución podemos usar la prueba X^2 de normalidad, la prueba Kolmogorov-Smirnov, 
 la prueba Shapiro-Wilk y la prueba Lilliefors estas ultimas son la mas famosa para normalidad. 
+
 * El valor de la prueba Kolmogorov-Smirnov es: ´0.123436625014´
 * El valor p de la prueba es: ´5.73947997152e-10´
 * El valor de la prueba Shapiro-Wilk es: ´0.9677223563194275´
 * El valor p de la prueba es: ´1.819115823309403e-05´
+
 Ahora veamos una distribución acumulada de la estatura de los corredores y su normal:
 <br/>
 <p align="center">
@@ -63,10 +65,10 @@ la dispersión de las cajas. Nos muestra valores extremos tambien. Para este caso
 temporada 2017.
 <br/>
 <p align="center">
-<img src="Entender_boxplot.png" alt="boxplot">
+<img src="Images/Entender_boxplot.png" alt="boxplot">
 </p><br/>
 
-´´´
+```
 | Nombre               | Altura  | Peso | Yardas | Status | Posicion | 
 |----------------------|---------|------|--------|--------|----------| 
 | "Ajayi, Jay"         | 182.88  | 223  | 873.0  | ACT    | RB       | 
@@ -89,7 +91,7 @@ temporada 2017.
 | "McCoy, LeSean"      | 180.0   | 210  | 1138.0 | ACT    | RB       | 
 | "Miller, Lamar"      | 177.5   | 225  | 888.0  | ACT    | RB       | 
 | "Murray, Latavius"   | 192.024 | 230  | 842.0  | ACT    | RB       | 
-´´´ 
+```
 
 ## Aprendizaje.
 >El aprendizaje es una propiedad de la actividad mental que produce en el organismo el resultado de cambiar o modificar 
@@ -99,7 +101,7 @@ temporada 2017.
 aprendizaje (prueba y error) para diseñar al mejor running back de la NFL. 
 <br/>
 <p align="center">
-<img src="boxplot_historico.png" alt="historico">
+<img src="Images/boxplot_historico.png" alt="historico">
 </p><br/>
 ¿Qué vemos?
 En los años veinte la mediana es muy baja pero hay muchos outliers (por lo que tal vez se tenía que la idea era tener corredores altos)
@@ -112,7 +114,7 @@ usar una muestra). Sin embargo, realizaremos una prueba de hipotesis de la difer
 (Para mayor información correr el codigo).
 <br/>
 <p align="center">
-<img src="prueba_hipotesis.png" alt="hipotesis">
+<img src="Images/prueba_hipotesis.png" alt="hipotesis">
 </p><br/>
 Podemos ver claramente que es improbable que se haya dado por aleatoriedad la altura de los corredores. 
 Pero, ¿Que no son mejores los jugadores altos, que no los mas altos tienen mas yardas? Veamos que pasa en la temporada 2017.
@@ -120,7 +122,7 @@ Usaremos un gráfico de dispersión pero las observaciones estarán en función de l
 Claramente se ve que no hay una relacion entre las yardas por temporada y la altura o inclusive el peso. 
 <br/>
 <p align="center">
-<img src="dispersion.png" alt="dispersion">
+<img src="Images/dispersion.png" alt="dispersion">
 </p><br/>
 
 ## ¿Qué hace el codigo?
