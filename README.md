@@ -27,11 +27,26 @@ Pero, ¿Qué nos dice la historia?
 * 1930 - 1940 es: `181.25`
 * 1940 - 1950 es: `181.39`
 * 1950 - 1960 es: `182.5`
-* 1960 - 1970 es: `184.54` Gale Sayers (183cm). John David Crow, Paul Hornung (188cm)
-* 1970 - 1980 es: `183.92` O. J. Simpson (185cm)
-* 1980 - 1990 es: `181.48` Earl Campbell, Tony Dorsett (180cm)
-* 1990 - 2000 es: `181.46` Emmitt Smith (175cm). Marshall Faulk, Thurman Thomas (178cm). Terrell Davis, Jerome Bettis (180cm). 
-* 2000 - 2010 es: `181.73` Warrick Dunn (175cm). Thomas Jones, Ricky Williams, Bryan Westbrook, LaDainian Tomlinson (178cm). Clinton Portis (180cm).
+* 1960 - 1970 es: `184.54` 
+
+Gale Sayers (183cm). John David Crow, Paul Hornung (188cm)
+
+* 1970 - 1980 es: `183.92` 
+
+O. J. Simpson (185cm)
+
+* 1980 - 1990 es: `181.48` 
+
+Earl Campbell, Tony Dorsett (180cm)
+
+* 1990 - 2000 es: `181.46` 
+
+Emmitt Smith (175cm). Marshall Faulk, Thurman Thomas (178cm). Terrell Davis, Jerome Bettis (180cm). 
+
+* 2000 - 2010 es: `181.73` 
+
+Warrick Dunn (175cm). Thomas Jones, Ricky Williams, Bryan Westbrook, LaDainian Tomlinson (178cm). Clinton Portis (180cm).
+
 * 2010 - 2016 es: `180.92`
 * 2017 es: `180.16`
 
@@ -59,7 +74,9 @@ Primero graficaremos la estatura de los corredores activos de  la temporada 2017
 La altura minima es 167.5cm. Son dos jugadores con esa altura:
 * `Tarik Cohen`: 377 yardas
 * `Jacquizz Rodgers`: 244 yardas
+
 La altura maxima es de 192cm. Son tres jugadores con esa estatura:
+
 * `Derrick Henry`: 744 yardas
 * `Latavius Murray`: 842 yardas
 * `Rod Smith`: 232 yardas
