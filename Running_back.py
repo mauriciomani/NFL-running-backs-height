@@ -176,21 +176,21 @@ def graficar_tiempo(lista, df):
     for i in lista:
         fig = plt.figure(figsize = (13, 7))
         ax = fig.add_subplot(111)
-        plt.xlim(df['Altura'].min() - 1, df['Altura'].max() + 1) 
+        plt.ylim(df['Altura'].min() - 1, df['Altura'].max() + 1) 
         #Ya que solo hay 10 jugadores con tan alto peso.
-        plt.ylim(df['Peso'].min() - 1, 275)
-        ax.scatter(x= i['Altura'], y= i['Peso'])
+        plt.xlim(df['Peso'].min() - 1, 275)
+        ax.scatter(x= i['Peso'], y= i['Altura'])
         titulo = titulos[n]
         print('La altura media de ' + str(titulo) + ' es: ' + str(i['Altura'].mean()))
-        plt.xlabel('Altura')
-        plt.ylabel('Peso')
-        ax.text(x = 164.5 , y = 127,
+        plt.xlabel('Peso')
+        plt.ylabel('Altura')
+        ax.text(x = 135 , y = 162,
                 s = '   ©Mauricio Mani' + espacio * 170 + 'Source: NFL: www.nfl.com/players   ',
                 fontsize = 10, color = '#f0f0f0', backgroundcolor = 'grey')
-        ax.text(x = 162.5, y = 285, 
+        ax.text(x = 124, y = 205, 
                s = 'Cambio en el peso y la altura de los corredores de la NFL a través del tiempo',
-              fontsize = 20, weight = 'bold', alpha = .75)
-        ax.text(x = 178, y = 278, s = 'Decada: ' + str(titulo), fontsize = 18, alpha = 0.85)
+              fontsize = 21, weight = 'bold', alpha = .75)
+        ax.text(x = 183, y = 203, s = 'Decada: ' + str(titulo), fontsize = 18, alpha = 0.85)
         #plt.savefig('Images/'+ str(titulo) + '.png')
         n +=1
 
@@ -409,17 +409,17 @@ def graficar_dispersion_2017(df_2017):
     espacio = ' ' 
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    ax.scatter(x= df_2017['Altura'], y= df_2017['Peso'], s= df_2017['Yardas'], c = 'dodgerblue')
-    plt.ylim(175, 260)
-    plt.xlabel('Altura')
-    plt.ylabel('Peso')
-    ax.text(x = 165 , y = 164,
+    ax.scatter(x= df_2017['Peso'], y= df_2017['Altura'], s= df_2017['Yardas'], c = 'dodgerblue')
+    plt.xlim(175, 260)
+    plt.xlabel('Peso')
+    plt.ylabel('Altura')
+    ax.text(x = 174 , y = 163,
             s = '   ©Mauricio Mani' + espacio * 170 + 'Source: NFL: www.nfl.com/players   ',
     fontsize = 10, color = '#f0f0f0', backgroundcolor = 'grey')
-    ax.text(x = 166.5, y = 269.5, 
+    ax.text(x = 175, y = 196, 
             s = '¿Altos o no tanto? - ¿Pesados o rápidos y elusivos?',
             fontsize = 18, weight = 'bold', alpha = .75)
-    ax.text(x = 166.5, y = 260.5, s = 'Gráfico de dispersión de la altura y peso de los corredores cada punto muestra las yardas\nParece no haber una clara relación entre yardas y altura o peso',
+    ax.text(x = 175, y = 193, s = 'Gráfico de dispersión de la altura y peso de los corredores cada punto muestra las yardas\nParece no haber una clara relación entre yardas y altura o peso',
             fontsize = 16, alpha = 0.85)
     plt.show()
 

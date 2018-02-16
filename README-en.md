@@ -4,15 +4,15 @@ Fun statistics and running backs in the NFL
 #Translations:
 * [Español](README.md)
 * [English](README-en.md)
-There is no translation on plots' title.
+There is no translation on plots titles.
 
-## The idea ant the article
+## The idea and the article
 In the season of 2013 only two of the top ten best running backs measured more than 6 foot: Adrian Peterson & Arian Foster. 
 NFL is characterized for having tall and big players but that is not necessarily true for running backs. 
 First: Too tall players are not wanted because they are an easy target behind the line. Shorter running backs can hide behind 
-big players, "the line". A low center of gravity is also wanted. 
+big players, "the line". Second: A low center of gravity is also wanted. 
 
-Has NFL changed since its beginning? Yes and a lot. But, how they have changed? Learning from the past.
+Has NFL changed since its beginning? Yes and a lot. But, how have they changed? Learning from the past.
 the idea of analizing running backs´ database comes from an article wrote by `bleacherreport.com`.
 Has NFL learned from the past? Do we have the best possible running backs? BJKissel tried to design  
 the best possible running back, based on height, weight and speed. He took as reference 2013 running backs.
@@ -57,11 +57,11 @@ it went back to a 181cm mean.
 The horizontal axis shows the weight and the vertical axis shows the height. So an increase in the height would rise observations
 and an increase in weight would move observations to the right. It seems running backs are stronger nowadays and smaller
 than before the eighties.
-In order to understand the learning process over running backs we would make some boxplots. Understanding the is difficult
+In order to understand the learning process over running backs we would make some boxplots. Understanding boxplots is difficult
 so we would use a 2017 season example.
 
 ## Understanding statistics with 2017 season information. 
-Boxplots are one of the most complete tools for beforehand analysis over obtained data. Since unlike boxplots, histograms 
+Boxplots are one of the most complete tools for beforehand analysis over obtained data. Unlike boxplots histograms 
 allow us to compare distributions in an easy way. Commonly we want to know how normal is the data. Use a boxplot!
 It is easier to see normality graphically with a histogram (do not worry, also with a boxplot). 
 First we will graph the height of active running backs in 2017 and we will compare it with a normal distribution.  
@@ -80,31 +80,31 @@ The maximum height is 192cm. There are three players with that height:
 * `Derrick Henry`: 744 yards
 * `Latavius Murray`: 842 yards
 * `Rod Smith`: 232 yards
-Mean is 180.16cm, but we can clearly see in the histogram mode is found in other interval.
+Mean is 180.16cm, but we can clearly see the histogram mode is found in other interval.
 That is why is common to see smaller running backs than the mean. 
-However, It seems normal, right? Well we cannot compared it naked eye. We can use a Q-Q plot. Wich compare values 
-seen with hypotetically normal probability value, a normal distribution would be a 45 degrees line. In these case it does not look normal.
+It seems normal, right? Well we cannot compared it naked eye. We can use a Q-Q plot. Wich compares values 
+seen with hypotetically normal probability values, a normal distribution would be a 45 degrees line. In these case it does not look normal.
 
 <br/>
 <p align="center">
 <img src="Images/Q-Q_plot.png" alt="Q-Q plot">
 </p><br/>
 
-As we can see points are found in certain regions, that is due to a lack of continuity in data. 
-That is why Q-Q plot is not a good indicator. 
+As we can see, points are found in certain regions, that is due to a lack of continuity in data. 
+That is why Q-Q plot is not a good indicator (for this data).
 One of the assumptions of normality is an equal mean, equal median and equal mode. Mean is ´180.21´
 the median is ´180.16´ and there is no mode (or all the values are in mode). 
 ¡Let's do more advanced statistics!
 To prove normality in a distribution we can use X^2 test for normality, Kolmogorov-Smirnov test, 
-Shapiro-Wilk test and y Lilliefors test the last ones are the most famous for normality. They are all hypothesis testing, where we have a null hypothesis
-and an alternative. 
+Shapiro-Wilk test and y Lilliefors test the last ones are the most famous for proving normality. They are all derivations of hypothesis testing, 
+where we have a null hypothesis and an alternative. 
 
 * Kolmogorov-Smirnov test value is: `0.123436625014`
 * P-value for the test is: `5.73947997152e-10`
 * Shapiro-Wilk test value is: `0.9677223563194275`
 * P-value for the test is: `1.819115823309403e-05`
 
-Shapiro Wilk propose a null hypothesis where observations come from a null hypothesis.
+Shapiro Wilk propose a null hypothesis where observations come from a normal distribution.
 We will now see a cummulative distribution of the running backs´ height compared by its normal:
 
 <br/>
@@ -112,10 +112,10 @@ We will now see a cummulative distribution of the running backs´ height compared
 <img src="Images/Histograma_acumulado.png" alt="Kolmogorov">
 </p><br/>
 
-Normality in our distribution is rejected by the data. So much Lilliefors as Kolmogorov-Smirnov test
+Normality in our distribution has to be rejected. So much Lilliefors as Kolmogorov-Smirnov test
 are based on the most extreme distance between cummulative distribution seen and hypothetical normal cummulative distribution.
-Moreover, the two test we made have extremely low p-values. 
-And normality can be crearly seen in a boxplot thanks to boxes dispersion. Extreme values are shown as well.
+Moreover, the two test we have made have an extremely low p-values. 
+And normality can be crearly seen in a boxplot thanks to boxes dispersion. Extreme values are shown as well and are called: outliers.
 We will use 2017 season running backs with more than 800 yards.
 
 <br/>
@@ -160,15 +160,15 @@ All right! Now we can understand how running backs´ height have changed over dec
 <img src="Images/boxplot_historico.png" alt="historico">
 </p><br/>
 
-¿What do we see?
+What do we see?
 In the twenties the median was low but the distribution has a lot of outliers (possibly the idea around their heads was having higher running backs)
-and also it might be low of the average american height.
-From thirties to seventies the median height clearly rise. These years are learning years.
+and also it might be low because of the average american height.
+From the thirties to the seventies the median height clearly rise. These years are learning years.
 Since eighties we see the median has reduced and it has been kept to nowadays.
-Decades distribution seems to be positevely biased, you will se a bigger concentration of smaller players. 
+Decades distribution seems to be positevely biased, you will see a bigger concentration of smaller players. 
 Also distributions have shrinkage, it is a sign of knowing, NFL knows what they want.
-This is population data, So whatever we have seen on this plots is the reality (unlike using a sample). 
-Even though, we will make an hypothesis test on the difference on two independent samples.
+This is population data, so whatever we have seen on this plots is the reality (unlike using a sample). 
+Even though, we will make an hypothesis test on the difference of two independent samples.
 (For more information, run the code).
 
 <br/>
@@ -188,15 +188,15 @@ Clearly we can see there is no relation between yards, height or even weight.
 
 ## Conclusion.
 The previous plot shows us that being taller or heavier does not mean to have more yards.
-Remember that the mean and the median are central tendency and we have to pick the one that represent the data the best.
-In this case mean might not be the best parameter, and remember having a mean does not mean we will not see other values, we can see
+Remember that the mean and the median are central tendency measures and we have to pick the one that represent the data the best.
+In this case mean might not be the best parameter, and remember having an average does not mean we will not see other values, we can see
 very extreme values. 
 In fact, we can realize that NFL has learned over the years. And this is shown by the distributions movement over the decades (thus a movement in the mean)
 As said in the article, NFL look at having players between 178 and 182 centimeters they are more active. Do not get confused, just because 
-a running back is height does not mean his a bad player, probably he is even better. 
+a running back is tall does not mean his a bad player, probably he is even better, because NFL is looking to draft smaller players. 
 
 ## What does the code do?
-It first scrape data of historically and 2017 running backs from NFL official web page.
+It first scrape historically and 2017 running backs data from NFL official web page.
 Feet to centimeters are converted.
 It plots and make statistical tests, just as you have seen here.
 And also some additional information on running backs and full backs.
