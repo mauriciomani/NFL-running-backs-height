@@ -3,7 +3,7 @@ Estadística divertiva y running backs de la NFL
 
 #Traducciones:
 * [Español](README.md)
-* [Ingles](README-en.md)
+* [English](README-en.md)
 
 ## La idea y el artículo.
 Para la temporada 2013 solo 2 jugadores de los mejores 10 medían mas de 6 pies: Adrian Peterson y Arian Foster. 
