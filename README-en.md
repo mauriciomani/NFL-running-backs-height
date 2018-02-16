@@ -54,8 +54,8 @@ Warrick Dunn (175cm). Thomas Jones, Ricky Williams, Bryan Westbrook, LaDainian T
 The image shows how height and weight have changed over decades, since 1920 till 2017 season. 
 Over the fiftys and till the seventies height distribution is found on the right and in the later seasons 
 it went back to a 181cm mean. 
-The horizontal axis shows the height and the vertical axis shows the weight. So an increase in the height would move observations to
-the right and an increase in weight would make observations go up. It seems running backs are stronger nowadays and smaller
+The horizontal axis shows the weight and the vertical axis shows the height. So an increase in the height would rise observations
+and an increase in weight would move observations to the right. It seems running backs are stronger nowadays and smaller
 than before the eighties.
 In order to understand the learning process over running backs we would make some boxplots. Understanding the is difficult
 so we would use a 2017 season example.

@@ -53,8 +53,8 @@ Warrick Dunn (175cm). Thomas Jones, Ricky Williams, Bryan Westbrook, LaDainian T
 Esta imagen muestra como ha cambiado la altura y el peso a través de las decadas desde 1920 hasta la temporada del 2017. 
 Durante los cincuentas y hasta finales de los setentas la distribución de la altura se encontrará a la derecha y en las decadas 
 posteriores retrocederá a una media de 181cm. 
-En el eje horizontal o de las abscisas se muestra la altura y el eje vertical o real se muestra el peso. Por lo que un aumento
-en la altura desplazaría las observaciones a la derecha y un aumento en el peso hacia arriba. Parece que los corredores son mas 
+En el eje horizontal o de las abscisas se muestra el peso y el eje vertical o real se muestra la altura. Por lo que un aumento
+en la altura desplazaría las observaciones hacia arriba y un aumento en el peso hacia la derecha. Parece que los corredores son mas 
 fuertes hoy en dia y menos altos que en decadas anteriores a los ochentas.
 Para entender mejor el aprendizaje sobre los corredores graficaremos boxplots (diagrama de caja y bigotes) que son dificiles de entender
 por lo que explicaré un boxplot con un ejemplo de la temporada 2017.
