@@ -16,7 +16,7 @@ Has NFL changed since its beginning? Yes and a lot. But, how have they changed? 
 the idea of analizing running backs´ database comes from an article wrote by `bleacherreport.com`.
 Has NFL learned from the past? Do we have the best possible running backs? BJKissel tried to design  
 the best possible running back, based on height, weight and speed. He took as reference 2013 running backs.
-For all that, what is history saying?
+For all that, what is history telling us about?
 
 <br/>
 <p align="center">
@@ -51,13 +51,13 @@ Warrick Dunn (175cm). Thomas Jones, Ricky Williams, Bryan Westbrook, LaDainian T
 * 2010 - 2016 is: `180.92`
 * 2017 is: `180.16`
 
-The image shows how height and weight have changed over decades, since 1920 till 2017 season. 
-Over the fiftys and till the seventies height distribution is found on the right and in the later seasons 
+The image shows how height and weight have changed across decades, since 1920 till 2017 season. 
+Since the fiftys and till the seventies height distribution is found on the right and in the later seasons 
 it went back to a 181cm mean. 
 The horizontal axis shows the weight and the vertical axis shows the height. So an increase in the height would rise observations
 and an increase in weight would move observations to the right. It seems running backs are stronger nowadays and smaller
 than before the eighties.
-In order to understand the learning process over running backs we would make some boxplots. Understanding boxplots is difficult
+In order to understand the learning process about running backs we would make some boxplots. Understanding boxplots is difficult
 so we would use a 2017 season example.
 
 ## Understanding statistics with 2017 season information. 
@@ -105,7 +105,7 @@ where we have a null hypothesis and an alternative.
 * P-value for the test is: `1.819115823309403e-05`
 
 Shapiro Wilk propose a null hypothesis where observations come from a normal distribution.
-We will now see a cummulative distribution of the running backs´ height compared by its normal:
+We will now see a cummulative distribution of the running backs´ height compared with its normal:
 
 <br/>
 <p align="center">
@@ -115,7 +115,7 @@ We will now see a cummulative distribution of the running backs´ height compared
 Normality in our distribution has to be rejected. So much Lilliefors as Kolmogorov-Smirnov test
 are based on the most extreme distance between cummulative distribution seen and hypothetical normal cummulative distribution.
 Moreover, the two test we have made have an extremely low p-values. 
-And normality can be crearly seen in a boxplot thanks to boxes dispersion. Extreme values are shown as well and are called: outliers.
+And normality can be clearly seen in a boxplot thanks to boxes dispersion. Extreme values are shown as well and are called: outliers.
 We will use 2017 season running backs with more than 800 yards.
 
 <br/>
@@ -150,9 +150,9 @@ We will use 2017 season running backs with more than 800 yards.
 
 ## Learning.
 >Learning is a state of mental activity that produces modifications or changings in organism's
->cognitive system and its observable behavior. They are relativetilly permanent changes that ocurred by practice conditions.
+>cognitive system and its observable behavior. They are relatively permanent changes that ocurred by practice conditions.
 
-All right! Now we can understand how running backs´ height have changed over decades and also the learning
+All right! Now we can understand how running backs´ height have changed across decades and also the learning
 (test and error) in order to design the best NFL running back. 
 
 <br/>
@@ -163,9 +163,9 @@ All right! Now we can understand how running backs´ height have changed over dec
 What do we see?
 In the twenties the median was low but the distribution has a lot of outliers (possibly the idea around their heads was having higher running backs)
 and also it might be low because of the average american height.
-From the thirties to the seventies the median height clearly rise. These years are learning years.
+Since the thirties to the seventies the median height clearly rise. These years are learning years.
 Since eighties we see the median has reduced and it has been kept to nowadays.
-Decades distribution seems to be positevely biased, you will see a bigger concentration of smaller players. 
+Decades distribution seems to be positively biased, you will see a bigger concentration of smaller players. 
 Also distributions have shrinkage, it is a sign of knowing, NFL knows what they want.
 This is population data, so whatever we have seen on this plots is the reality (unlike using a sample). 
 Even though, we will make an hypothesis test on the difference of two independent samples.
@@ -191,7 +191,7 @@ The previous plot shows us that being taller or heavier does not mean to have mo
 Remember that the mean and the median are central tendency measures and we have to pick the one that represent the data the best.
 In this case mean might not be the best parameter, and remember having an average does not mean we will not see other values, we can see
 very extreme values. 
-In fact, we can realize that NFL has learned over the years. And this is shown by the distributions movement over the decades (thus a movement in the mean)
+In fact, we can realize that NFL has learned over the years. And this is shown by the distributions movement across the decades (thus a movement in the mean)
 As said in the article, NFL look at having players between 178 and 182 centimeters they are more active. Do not get confused, just because 
 a running back is tall does not mean his a bad player, probably he is even better, because NFL is looking to draft smaller players. 
 
